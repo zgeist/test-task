@@ -1,0 +1,20 @@
+<li class="list-group-item">
+    <div class="item">
+        <span class="glyphicon" ng-if="node.children.length" ng-click="toggleCollapse()" ng-class="{'glyphicon-minus' : node.expanded, 'glyphicon-plus' : !node.expanded}"></span>
+        <span class="item-label" ng-click="node.editMode = true" ng-hide="node.editMode">{{node.name}}</span>
+        <span ng-show="node.editMode">
+            <input class="form-control edit-name" enter-press="node.editMode = false" ng-model="node.name">
+        </span>
+        <div class="control btn-group">
+            <button class="btn btn-sm btn-success" ng-click="addNode()">
+                <span class="glyphicon glyphicon-plus"></span>
+            </button>
+            <button class="btn btn-sm btn-primary" ng-click="updateNode()">
+                <span class="glyphicon glyphicon-pencil"></span>
+            </button>
+            <button class="btn btn-sm btn-warning" ng-click="removeNode()">
+                <span class="glyphicon glyphicon-trash"></span>
+            </button>
+        </div>
+    </div>
+</li>

@@ -1,0 +1,32 @@
+<!doctype html>
+<html ng-app="NestedList">
+    <head>
+        <title>Nested list</title>
+
+        <link rel="stylesheet" href="assets/components/bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/main.css">
+    </head>
+    <body>
+
+        <div class="container">
+
+            <div class="nested-list" ng-controller="NestedListCtrl">
+
+                <node-collection collection="list"></node-collection>
+
+            </div>
+
+            <!--<div class="nested-list" ng-controller="NestedListRecCtrl"></div>-->
+
+        </div>
+
+        <!--<script src="assets/components/underscore/underscore-min.js"></script>-->
+        <!--<script src="assets/components/backbone/backbone-min.js"></script>-->
+        <!--<script src="assets/source/app1.js"></script>-->
+        <script src="assets/components/angular/angular.min.js"></script>
+        <script src="assets/source/app.js"></script>
+        <script src="assets/source/controllers.js"></script>
+        <script src="assets/source/directives.js"></script>
+
+    </body>
+</html>
