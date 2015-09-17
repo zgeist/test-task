@@ -1,0 +1,13 @@
+<li class="list-group-item" ng-repeat="item in items track by $index">
+    <div class="item">
+        <span class="item-label">{{item.name}}</span>
+        <div class="control">
+            <button class="btn btn-sm" ng-click="addItem()">
+                <span class="glyphicon glyphicon-plus"></span>
+            </button>
+            <button class="btn btn-sm" ng-click="removeItem()">
+                <span class="glyphicon glyphicon-trash"></span>
+            </button>
+        </div>
+    </div>
+</li>
