@@ -54,3 +54,7 @@ NestedList.directive 'enterPress', ()->
           scope.$eval(attrs.enterPress)
 
         event.preventDefault()
+
+    element.on 'blur', ()->
+      scope.$apply ()->
+        scope.$eval(attrs.enterPress)

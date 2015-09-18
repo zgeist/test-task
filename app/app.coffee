@@ -51,6 +51,8 @@ NestedList.service '$localStorage', ()->
   {
     save: (data)->
       localStorage.setItem('nestedList', JSON.stringify(data))
+
+      on
     get: ()->
       JSON.parse(localStorage.getItem('nestedList'))
   }
@@ -59,4 +61,3 @@ NestedList.factory 'storeData', (defaultData, $localStorage)->
 
   $localStorage.get() || defaultData
 
-#  defaultData

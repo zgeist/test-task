@@ -48,7 +48,8 @@ NestedList.constant('defaultData', [
 NestedList.service('$localStorage', function() {
   return {
     save: function(data) {
-      return localStorage.setItem('nestedList', JSON.stringify(data));
+      localStorage.setItem('nestedList', JSON.stringify(data));
+      return true;
     },
     get: function() {
       return JSON.parse(localStorage.getItem('nestedList'));

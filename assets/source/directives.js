@@ -52,13 +52,18 @@ NestedList.directive('listNode', function($compile) {
 
 NestedList.directive('enterPress', function() {
   return function(scope, element, attrs) {
-    return element.on('keydown keypress', function(event) {
+    element.on('keydown keypress', function(event) {
       if (event.which === 13) {
         scope.$apply(function() {
           return scope.$eval(attrs.enterPress);
         });
         return event.preventDefault();
       }
+    });
+    return element.on('blur', function() {
+      return scope.$apply(function() {
+        return scope.$eval(attrs.enterPress);
+      });
     });
   };
 });
